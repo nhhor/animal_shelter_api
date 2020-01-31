@@ -40,9 +40,17 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
+# ~NH~ COMMENT OUT GEM BELOW TO REMOVE BASH WARNINGS FOR OLD SYSTEMS
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# ~NH~ ADDED FAKER FOR `rails db:seed`
+# ~NH~ ADDED FAKER FOR `rake db:seed`
 gem 'faker'
+
+# ~NH~ ADDED RSPEC FOR TESTING, ADDED TO ALL SECTION FOR DELPOYMENT
+gem 'rspec-rails'
+
+# ~NH~ ADDED factory_bot_rails FOR TESTING
+group :test do
+  gem 'factory_bot_rails'
+end
