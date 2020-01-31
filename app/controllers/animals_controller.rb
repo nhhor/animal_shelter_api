@@ -12,7 +12,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.create!(animal_params)
-    json_response(@animal)
+    json_response(@animal, :created)
   end
 
   def update
@@ -28,7 +28,7 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.permit(:author, :content)
+    params.permit(:name, :animal_type, :breed, :sex, :color, :birthday, :notes)
   end
 
 end
