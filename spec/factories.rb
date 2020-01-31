@@ -1,7 +1,7 @@
 FactoryBot.define do
 
   factory :animal, class: Animal do
-    name { Faker::Creature::Cat.unique.name }
+    name { Faker::Creature::Cat.name }
     animal_type { "Cat" }
     breed { Faker::Creature::Cat.breed }
     sex { Faker::Creature::Dog.gender }
